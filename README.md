@@ -1,6 +1,6 @@
 # ActiveModel::AttributeReader
 
-Allow ActiveModel::Model constructor parameters with attr_reader attributes.
+Allow attr_reader attributes on ActiveModel::Model constructor.
 
 ## Installation
 
