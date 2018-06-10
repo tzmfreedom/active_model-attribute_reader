@@ -1,8 +1,6 @@
 # ActiveModel::AttributeReader
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/active_model/attribute_reader`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Allow ActiveModel::Model constructor parameters with attr_reader attributes.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Model
+  include ActiveModel::Model
+  include ActiveModel::AttributeReader
+
+  attr_reader :a
+  attr_accessor :b
+end
+
+model = Model.new(a: 123, b: 'value')
+model.a # => 123
+model.b # => 'value'
+```
 
 ## Development
 
